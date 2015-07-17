@@ -19,6 +19,9 @@ var checkNumbers = function(event) {
  if(results[0] && results[1]) {
     $("#win-lose").html("<b>You've Won!</b>");
     console.log("winner");
+  } else if (results[0] || results[1]) {
+    $("#win-lose").html("<b>You got only one right!</b>");
+    console.log("loser");
   } else {
     $("#win-lose").html("<b>You are sadly not a winner!</b>");
     console.log("loser");
