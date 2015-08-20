@@ -14,6 +14,15 @@ var checkNumbers = function(event) {
 
   _.each(inputs, function(input) {
     results[input] = _.contains(lottos, input);
+
+    for (var key in results) {
+      if (results[key]) {
+        console.log(key + " was a winning number!");
+      } else {
+        console.log(key + " was not a winning number...");
+      }
+    }
+
   });
 
  if(results[0] && results[1]) {
